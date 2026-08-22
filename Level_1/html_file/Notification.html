@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informetion-page</title>
+    <link rel="stylesheet" href="/Level1/css_file/Notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+    <div class="user-box">
+      <div class="logo" id="avatar">DU</div>
+      <div>
+        <div id="sideName">Demo User</div>
+        <div style="font-size:11px; font-weight :500 #64748b" id="sideEmail">demo@webtech.practice</div>
+      </div>
+    </div>
+    
+    <div class="menu-section">DASHBOARD</div>
+    <div class="menu-item " onclick="window.location.href='overview.html'" >Overview</div>
+    <div class="menu-item" onclick="window.location.href='profile.html'">Profile Settings</div>
+    <div class="menu-item" onclick="window.location.href='security.html'">Security</div>
+    <div class="menu-item active">Notification</div>
+    <div class="menu-section">QUICK ACTION</div>
+    <div class="menu-item" onclick="window.location.href='help_support.html'">Help & Support</div>
+    <div class="bottom">ACCOUNT</div>
+    <div class="menu-item" onclick="logout()">Sign out</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">WebTech Practice Dashboard</div>
+    <div class="content">
+
+      <div class="Notification">
+        <h2>Notification</h2>
+        <div class="header">
+          <span><i class="fa-solid fa-bell icon"></i></span> Notification Preferences
+        </div>
+
+      <p class="para">Manage how and when you receive notification about your account activity.</p>
+
+      <div class="grid">
+
+        <div class="box">
+          <span><i class="fa-solid fa-envelope icon"></i></span>
+           <h4> Email Notifications</h4>
+           <p>Receive inportent update via email</p>
+           <div class="check">
+            <input type="checkbox" id="email"onchange="savepref()" >
+            <label for ="email">Enable email notification</label>
+           </div>
+        </div>
+
+
+        <div class="box">
+          <span><i class="fa-solid fa-lock icon"></i></span>
+          <h4>Security Alert</h4>
+          <p>Get notified about security change</p>
+          <div class="check">
+            <input type="checkbox" id="alert" onchange="savepref()">
+            <label for="alert">Enable security alerts</label>
+          </div>
+        </div>
+
+      </div>
+
+        <div class="section">
+          <span><i class="fa-regular fa-clipboard icon"></i></span>
+          Recent Activity
+        </div>
+
+        <div class="activity-box">
+          <div class="activity-item">
+            <input type="checkbox" checked disabled>
+
+            <div class="activity-text">
+              <h5>Profile Updated</h5>
+              <p>Your profile informetion was successfully update</p>
+              <span>Today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+
+
+      </div>
+
+      <script src="/Level1/js_file/Notification.js"></script>
+    
+    
+</body>
+</html>ccc

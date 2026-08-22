@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard WebTech Practice</title>
+  <link rel="stylesheet" href="/Level1/css_file/overview.css">
+
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="user-box">
+      <div class="logo" id="avatar">DU</div>
+      <div>
+        <div id="sideName">Demo User</div>
+        <div style="font-size:11px; font-weight : 400px #64748b" id="sideEmail">demo@webtech.practice</div>
+      </div>
+    </div>
+    
+    <div class="menu-section">DASHBOARD</div>
+    <div class="menu-item active">Overview</div>
+    <div class="menu-item" onclick="window.location.href='profile.html'">Profile Settings</div>
+    <div class="menu-item" onclick="window.location.href='security.html'">Security</div>
+    <div class="menu-item" onclick="window.location.href='Notification.html'">Notification</div>
+    <div class="menu-section">QUICK ACTION</div>
+    <div class="menu-item" onclick="window.location.href='help_support.html'">Help & Support</div>
+    <div class="bottom">ACCOUNT</div>
+    <div class="menu-item" onclick="logout()">Sign out</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">WebTech Practice Dashboard</div>
+    <div class="content">
+      <div class="welcome-card">
+        <h2 id="welcomeText">Welcome back, Demo User</h2>
+        <p>Manage your profile Settings and account preferences. Your data is security stored in your browser's localStorage</p>
+        <div class="cards-grid">
+          <div class="card"><h3>Theme</h3><p>Dark/Light mode position access all pages</p><div class="progress-bar"></div></div>
+          <div class="card"><h3>Authentication</h3><p>Secure session stored in browser storege</p><div class="progress-bar"></div></div>
+          <div class="card"><h3>Profile</h3><p style="margin-top: 50px;">20% completed lU5 fields</p><div class="progress-bar"></div></div>
+          <div class="card"><h3>Security</h3><p>Password protection and account security</p><div class="progress-bar"></div></div>
+        </div>
+        <h3>Quick Actions</h3>
+        <div class="quick-actions">
+          <div class="action-card"><h4>Edit Profile</h4><p>Update your information</p></div>
+          <div class="action-card"><h4>Change Password</h4><p>Update your account security</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/Level1/js_file/overview.js">
+</script>
+  
+</body>
+</html>

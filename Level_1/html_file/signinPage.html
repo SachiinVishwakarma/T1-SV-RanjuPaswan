@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/Level1/css_file/signinPage.css">
+</head>
+<body>
+    <div class="card">
+        
+            <h2>Create your account</h2>
+            <p class="subtitle">
+                Sign up to access the practice dashboard.
+            </p>
+
+<form id="signupForm">
+    <p id="errormsg" style="color: red; margin-bottom: 15px;"></p>
+    <div class="row">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" >
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" >
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" placeholder="Create new password" >
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPass">Confirm Password:</label>
+            <input type="password" id="confirmPass" name="confirmPassword" placeholder="Confirm password">
+        </div>
+    </div>
+
+    <div class="hint">
+        Use at least 8 characters, with letters and numbers.
+    </div>
+    <div class="agree">
+        <label>
+            <input type="checkbox" id="terms">
+            <p>I agree to the terms</p>
+        </label>
+    </div>
+
+    <button type="submit" class="btn" 
+    >
+        Create Account
+    </button>
+</form>
+<p class="signup-txt">
+                    Already have an account?
+                    <a href="login.html">
+                        Sign in
+                    </a>
+                </p>
+        
+                </div>
+                <script src="/Level1/js_file/signin.js"></script>
+                </body>
+</html>

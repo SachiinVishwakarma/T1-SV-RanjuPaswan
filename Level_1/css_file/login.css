@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    
+    background-color: #f3f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.card{
+    background-color: white;
+    width:100%;
+    max-width: 420px;
+    border-radius: 16px;
+    padding: 32px;
+    border-top: 5px solid #40e0d0;
+    text-align: center;
+}
+h2{
+    font: size 24px;;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.subtitle{
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.group{
+    margin-bottom: 18px;
+    text-align: left;
+}
+label{
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #374151;
+
+}
+input{
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #d1e7e5;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #f8fffe;
+    outline: none;
+    transition: 0.2s;
+}
+input:focus{
+    border-color: #40e0d0;
+    box-shadow: 0 0 0 3px rgba(79,209,197,0.15);
+
+}
+input.error{
+    
+        border: color #ef4444;
+}
+.hint{
+    font-size: 12px;
+    color: #6b7280;
+    margin: 4px ;
+    text-align: left;
+}
+.btn{
+    width: 100%;
+    background-color: #40e0d0;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+cursor: pointer;
+transition: 0.2s;
+}
+.btn:hover{
+    background-color: #36d4c5;
+    transform: translatey(-1px);
+}
+.footer-text{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+    color: #4b5563;
+}
+.footer-text a{
+    color: #40e0d0;
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer-text a:hover{
+    text-decoration: underline;
+}
+.error-text{
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+ .remember{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.remember label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: #777;
+}
+
+.remember input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    accent-color: #14b8a6;
+    cursor: pointer;
+}
+
+.remember a{
+    color: #14b8a6;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.remember a:hover{
+    text-decoration: underline;
+}

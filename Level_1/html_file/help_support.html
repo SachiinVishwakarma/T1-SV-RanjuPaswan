@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support</title>
+    <link rel="stylesheet" href="/Level1/css_file/help_support.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+    <div class="user-box">
+      <div class="logo" id="avatar">DU</div>
+      <div>
+        <div id="sideName">Demo User</div>
+        <div style="font-size:11px; font-weight : 500px #64748b" id="sideEmail">demo@webtech.practice</div>
+      </div>
+    </div>
+  
+    <div class="menu-section">DASHBOARD</div>
+    <div class="menu-item " onclick="window.location.href='overview.html'">Overview</div>
+    <div class="menu-item" onclick="window.location.href='profile.html'">Profile Settings</div>
+    <div class="menu-item" onclick="window.location.href='security.html'">Security</div>
+    <div class="menu-item" onclick="window.location.href='Notification.html'">Notification</div>
+    <div class="menu-section">QUICK ACTION</div>
+    <div class="menu-item active">Help & Support</div>
+    <div class="bottom">ACCOUNT</div>
+    <div class="menu-item" onclick="logout()">Sign out</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">WebTech Practice Dashboard</div>
+    <div class="content">
+        
+      <div class="help-card">
+            
+           
+        <h2>Help & Support</h2>
+           <div class="header">
+
+        <i class="fa-solid fa-question"></i>
+        <span>Frequently Asked Qustions</span>
+           </div>
+
+           <div class="box">
+            <h4>How do i update my profile?</h4>
+            <p> Click on "Profile Settings" in the sidebar to edit your personal informetion,address ,and other details</p>
+           </div>
+
+           <div class="box">
+            <h4>Is my data secure</h4>
+            <p>This is a demo application that stress data in your browser's localStorage.Is a production app,data would be encrypted and stord securely on servers.</p>
+           </div>
+
+           <div class="box">
+            <h4>How i change my password</h4>
+            <p>Go to "Security" in the sidebar,Enter your current password,then set and confirm your new password.</p>
+           </div>
+
+
+           <div class="header">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contect support</span>
+           </div>
+
+           <div class="contect-box">
+            <p>This is ademonstration application for learning web developoment. In a real application,you would find contact informetion and suppor option here.</p>
+           </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="/Level1/js_file/help_support.js"></script>
+</body>
+</html>
