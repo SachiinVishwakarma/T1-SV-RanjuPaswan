@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landing{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background: #062748!important ;
+}
+
+.toolbar {
+    min-height: 70px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 5% !important;
+}
+
+.logo {
+    color: white !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+}
+
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px;
+}
+
+.nav-btn {
+    color: white !important;
+    border: 1px solid #40e0d0 !important;
+    border-radius: 10px !important;
+    padding: 8px 18px !important;
+}
+
+
+.signup-btn {
+    background: #40e0d0 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 9px 20px !important;
+}
+
+.signup-btn:hover {
+    background: #6dcdc5 !important;
+} 
+.hero {
+    min-height: 550px;
+    padding: 70px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    background: #f4f8f9;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-title {
+    color: #0c0c0c !important;
+    font-size: 48px !important;
+    font-weight: bold !important;
+    line-height: 1.2 !important;
+    margin-bottom: 25px !important;
+}
+
+.hero-text {
+    color: #555 !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+.hero-buttons {
+    display: flex !important;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-green {
+    background: #40e0d0 !important;
+    color: white !important;
+    padding: 12px 25px !important;
+    border-radius: 8px !important;
+}
+
+.btn-green:hover {
+    background: #2fc8ba !important;
+}
+
+.btn-white {
+    color: #062748 !important;
+    border: 1px solid #40e0d0 !important;
+    padding: 12px 25px !important;
+    border-radius: 8px !important;
+}
+
+.btn-white:hover {
+    background: #40e0d0 !important;
+}

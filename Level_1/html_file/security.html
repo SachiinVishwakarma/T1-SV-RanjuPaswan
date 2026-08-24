@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+    <link rel="stylesheet" href="/Level1/css_file/security.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+    <div class="user-box">
+      <div class="logo" id="avatar">DU</div>
+      <div>
+        <div id="sideName">Demo User</div>
+         <div style="font-size:11px; font-weight : 500px #64748b" id="sideEmail">demo@webtech.practice</div>
+      </div>
+    </div>
+    <div class="menu-section">DASHBOARD</div>
+    <div class="menu-item " onclick="window.location.href='overview.html'" >Overview</div>
+    <div class="menu-item" onclick="window.location.href='profile.html'">Profile Settings</div>
+    <div class="menu-item active">Security</div>
+    <div class="menu-item" onclick="window.location.href='Notification.html'" >Notification</div>
+    <div class="menu-section">QUICK ACTION</div>
+    <div class="menu-item" onclick="window.location.href='help_support.html'">Help & Support</div>
+    <div class="bottom">ACCOUNT</div>
+    <div class="menu-item" onclick="logout()">Sign out</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">WebTech Practice Dashboard</div>
+    <div class="cantent">
+        <div class="security">
+            <h2>Security Settings</h2>
+            <h3>Security Settings</h3>
+
+            
+            <p class="para">Keep your account security by using a strong Password and changing it regularly.</p>
+    <div class="row">
+
+        <div class="group">
+            <label>Current Password</label>
+            <input type="password" id="pass" placeholder="Enter current password">
+        </div>
+        <div class="group">
+            <label>New Password</label>
+            <input type="password" id="new" placeholder="Minimum 8 character">
+        </div>
+
+    </div>
+        <div class="group">
+            <label>Confirm New Password</label>
+            <input type="password" id="con" placeholder="Re-enter new password">
+        </div>
+
+    <div class="btn-box">
+        <button class="clear" onclick="    clearFields();" >Clear</button>
+        <button class="update" onclick=" updatepassword()" >Update Password</button>
+    </div>
+
+        <hr>
+        <h3 class="info">Security Information</h3>
+
+        <div class="informetion">
+        <div class="card">
+              <i class="fa-solid fa-calendar-days"></i>
+            <h4> Account Created</h4>
+            <p id="accountcreated"></p>
+            <!-- <p>8/31/2025</p> -->
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Last Update</h4>
+            <p id="lastupdate">Never Updated</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h4>Session</h4>
+            <p>Current browser</p>
+        
+        </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="/Level1/js_file/security.js"></script>
+
+    
+</body>
+</html>

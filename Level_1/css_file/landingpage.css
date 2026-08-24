@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 30px;
+}
+
+body{
+    background: #f5f7f9;
+
+    
+}
+
+.navbar{
+    width: 100%;
+    background:#062748;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 1px solid #2eddd1;
+    border-radius: 12px;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.signup-btn{
+    background: #40e0d0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.signup-btn:hover{
+    background: #40e0d0;
+}
+
+.hero{
+    width: 85%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-left{
+    width: 48%;
+}
+
+.hero-left h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-left p{
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn-green{
+    background: #40e0d0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-white{
+    background: white;
+    border: 1px solid #ccc;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-green:hover{
+    background: #40e0d0;
+}
+
+.btn-white:hover{
+    background: #eee;
+    border: 1px solid #40e0d0;
+}
+
+.hero-right{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider{
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    min-height: 340px;
+    border: none;
+    border-top: 3px solid #062748;
+    border-radius: 28px;
+    box-shadow: 0 6px 20px
+rgba(59, 91, 219, 0.12);
+    padding: 35px;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide{
+    width: 70%;
+    text-align: center;
+}
+
+.slide h2{
+    margin-bottom: 20px;
+}
+
+.arrow{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 40%;
+    background: #40e0d0;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.slider{
+    position: relative;
+}
+
+.dots{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+   justify-content: center;
+   left: 50%;
+}
+.dot{
+
+    width: 10px;
+    height: 10px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.dot.active{
+    width: 10px;
+    height: 10px;
+    background: #40e0d0;
+    border-radius: 20px;
+}
+
+.about{
+    width:85%;
+    margin:0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2{
+    margin-top: 105px;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about p{
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.acc{
+    width: 470px;
+    border: 1px solid #40e0d0;
+    height: 40px;
+    border-color: #40e0d0;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.included{
+    width:85%;
+    margin:0 auto;
+    min-height: 100vh;
+}
+
+.included h2{
+    margin-top: 40px;
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    border: 1px solid #40e0d0;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+footer{
+    background:#062748;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    margin-top:60px;
+}
+
+.footer-links{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    border: 1px solid #40e0d0;
+    border-radius: 18px;
+    padding: 10px 28px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.footer-links button{
+    background:#40e0d0;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+.navbar{
+    flex-direction:column;
+    padding:15px;
+}
+
+.logo{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.nav-links{
+    width:100%;
+    flex-direction:column;
+    gap:12px;
+}
+
+.nav-links li,
+.nav-links a,
+.signup-btn{
+    width:100%;
+}
+
+.nav-links a,
+.signup-btn{
+    display:block;
+    text-align:center;
+}
+
+.hero{
+    width:95%;
+    flex-direction:column;
+    margin:30px auto;
+    gap:30px;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+    text-align:center;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+.hero-left p{
+    font-size:18px;
+}
+
+.btn-green,
+.btn-white{
+    width:100%;
+    margin:8px 0;
+}
+
+.slider{
+    width:100%;
+    height:auto;
+    min-height:280px;
+    padding:20px;
+}
+
+.slide{
+    width:100%;
+}
+
+.arrow{
+    width:40px;
+    height:40px;
+    font-size:18px;
+}
+  
+.about{
+      width:85%;
+    margin:0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.about h2{
+    font-size:38px;
+}
+
+.about p{
+    width:100%;
+}
+
+.acc{
+    width:100%;
+    height:auto;
+    min-height:55px;
+    padding:15px;
+    font-size:15px;
+}
+
+.included{
+     width:85%;
+    margin-top: 10px;
+    min-height: 100vh;
+}
+.included h2{
+    font-size:38px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.card{
+    width:100%;
+}
+
+footer{
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.footer-links{
+    width:100%;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-links a,
+.footer-links button{
+    width:100%;
+    text-align:center;
+}
+
+}

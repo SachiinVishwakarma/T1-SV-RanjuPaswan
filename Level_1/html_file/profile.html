@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-Setting</title>
+    <link rel="stylesheet" href="/Level1/css_file/profile.css">
+</head>
+<body>
+    <aside class="sidebar">
+    <div class="user-box">
+      <div class="logo" id="avatar">DU</div>
+      <div>
+        <div id="sideName">Demo User</div>
+        <div style="font-size:11px; font-weight : 500px #64748b" id="sideEmail">demo@webtech.practice</div>
+      </div>
+    </div>
+    <div class="menu-section">DASHBOARD</div>
+    <div class="menu-item " onclick="window.location.href='overview.html'">Overview</div>
+    <div class="menu-item active">Profile Settings</div>
+    <div class="menu-item" onclick="window.location.href='security.html'">Security</div>
+    <div class="menu-item" onclick="window.location.href='Notification.html'">Notification</div>
+    <div class="menu-section">QUICK ACTION</div>
+    <div class="menu-item" onclick="window.location.href='help_support.html'">Help & Support</div>
+    <div class="bottom">ACCOUNT</div>
+    <div class="menu-item" onclick="logout()">Sign out</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">WebTech Practice Dashboard</div>
+    <div class="content">
+        <div class="profile" style="height: 1000px;">
+            <h2 class="heading">Profile Setting</h2>
+             <div class="title">Personal Information</div>
+            <div class="form-grid">
+              <div class="group">
+                <label>Full Name</label>
+                <input type="text" id="fullname">
+              </div>
+              <div class="group">
+                <label>Date of Birth</label>
+                <input type="date" id="dob">
+              </div>
+              <div class="group">
+                <label>Email Address</label>
+                <input type="email" id="email">
+              </div>
+              <div class="group">
+                <label>Phone Number</label>
+                <input type="tel" id="number">
+              </div>
+            </div>
+            <div class="form-grid">
+              <h2 class="heading">Address Information</h2>
+              <div class="group full-width">
+                <label>Street Address</label>
+                <textarea type="text" id="Address" placeholder="Enter your completed address"></textarea>
+              </div>
+              <div class="group">
+                <label>PIN Code</label>
+                <input type="number" id="pin">
+              </div>
+              <div class="group">
+                <label>City</label>
+                <input type="text" id="city">
+              </div>
+              <div class="group">
+                <label>Country</label>
+                <input type="text" id="country">
+              </div>
+              <div class="group">
+                <label>Github Profile</label>
+                <input type="text" id="git">
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="btn-cancel" >Cancel Change</button>
+              <p id="msg"></p>
+              <button class="btn-save">Save Change</button>
+            </div>
+            
+        </div>
+      
+      
+    
+  </div>
+  <script src="/Level1/js_file/profile.js"></script>
+</body>
+</html>
