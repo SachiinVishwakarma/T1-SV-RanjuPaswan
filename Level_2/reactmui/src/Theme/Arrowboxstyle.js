@@ -8,10 +8,6 @@ export const Arrowboxstyle = (theme) => ({
   alignItems: "center",
   justifyContent: "center",
   flexShrink: 0,
+   cursor:"pointer",
 
-  "& img": {
-    width: "18px",
-    height: "18px",
-    objectFit: "contain",
-  },
 });

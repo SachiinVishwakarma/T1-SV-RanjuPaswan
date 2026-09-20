@@ -15,7 +15,7 @@ export const Herostyle = (theme) => ({
     color: theme.palette.text.primary,
     mb: 3,
     ml:5,
-    paddingTop: "40px",
+    pt:5,
   },
 
   description: {
@@ -32,9 +32,9 @@ export const Herostyle = (theme) => ({
 
  navbtn: {
   
-  color: "#000000 !important",
+  color:theme.palette.text.primary,
   "&:hover": {
-    color: "#2d2c2c !important",
+    color: theme.palette.text.primary,
     backgroundColor: "transparent",
   },
 },
@@ -53,8 +53,7 @@ export const Herostyle = (theme) => ({
   },
 
   cardContent: {
-    
-    padding: "10px important",
+  p:2,
   },
 
   cardBox: {
@@ -66,15 +65,24 @@ export const Herostyle = (theme) => ({
     gap: "20px",
   },
 
-  arrowImage: {
-    width: "12px",
-    height: "24px",
+  arrowIcon: {
+    color:theme.palette.primary.contrastText,
+    fontSize:"28px",
+    cursor:"pointer",
+  },
+
+  cardText:{
+    flex:1,
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
+    justifyContent:"center",
+
   },
 
   cardHeading: {
     fontSize: "24px",
      alignItems:"center",
-     textAlign:"center",
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.text.primary,
     mt:4,
@@ -98,5 +106,8 @@ export const Herostyle = (theme) => ({
   mb: 4,
   mt:2,
 },
+dotWrapper:{
+  cursor:"pointer",
+}
 
 });

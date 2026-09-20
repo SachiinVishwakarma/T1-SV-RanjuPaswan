@@ -22,7 +22,9 @@ const Services = () => {
           <Servicesbox />
         </Stack>
 
-        <Stack direction="row" spacing={1} sx={styles.stack}>
+        <Stack direction="row"
+         spacing={1} 
+         sx={(theme) => Servicesstyle(theme).stack}>
           <Servicesbox />
           <Servicesbox />
           <Servicesbox />

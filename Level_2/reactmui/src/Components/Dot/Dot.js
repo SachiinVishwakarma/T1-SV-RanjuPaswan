@@ -1,17 +1,17 @@
 
+import React from "react";
 import { Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { Dotstyle } from "../../Theme/Dotstyle";
 
 const Dot = ({ sx }) => {
+  const theme = useTheme();
+  const styles = Dotstyle(theme);
+
   return (
     <Box
       sx={{
-        width: "10px",
-        mb:"20px",
-        height: "10px",
-        minWidth: "10px",
-        borderRadius: "50%",
-        backgroundColor: "#14b8a6",
-        display: "block",
+        ...styles.dot,
         ...sx,
       }}
     />

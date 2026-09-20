@@ -1,31 +1,33 @@
 export const Aboutstyle = (theme) => ({
   about: {
     textAlign: "center",
-    mt:19,
-    mb: 10,
+    mt:20,
+    mb:18,
+    scrollMarginTop:"90px",
   },
 
   description: {
-    maxWidth: "738px",
+    maxWidth: "700px",
     display: "flex",
     justifySelf: "center",
-    mb: 4,
-    mt: 2,
+    mb: 3,
+    mt: 1,
     color: theme.palette.text.secondary,
+    
   },
 
   infoStack: {
     width: "600px",
     maxWidth: "90%",
     mx: "auto",
-    mb: 1,
+    
   },
 
   infoBox: {
     backgroundColor: theme.palette.background.default,
     border: `1px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
-    padding: "12px",
+    padding: "10px",
   },
 
   infoText: {

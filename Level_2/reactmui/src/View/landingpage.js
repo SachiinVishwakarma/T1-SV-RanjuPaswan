@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { Box } from "@mui/material";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero/Hero";
 import About from "../Components/About/About";
@@ -12,19 +12,19 @@ import Footer from "../Components/Footer/Footer";
 
 const LandingPage = () => {
   return (
-    <>
+    <Box>
       <Navbar />
 
-      <main>
+      
         <Hero />
         <About/>
         <Services/>
-      </main>
+      
 
       <Footer/>
 
       
-    </>
+    </Box>
   );
 };
 

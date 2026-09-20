@@ -10,6 +10,7 @@ export const navbtncss = (theme) => ({
   textTransform: "none",
   padding: "7px 16px",
   minWidth: "auto",
+  marginRight:"18px",
 
   "&:hover": {
     backgroundColor: "rgba(59, 130, 246, 0.12)",

@@ -139,18 +139,13 @@ const Hero = () => {
               <Arrowbox>
                 <ChevronLeftIcon
                   onClick={prevSlide}
-                  sx={{
-                    color: "white",
-                    fontSize: "28px",
-                    cursor: "pointer",
-                  }}
-                />
+                  sx={styles.arrowIcone }/>
               </Arrowbox>
 
 
         
 
-              <Box>
+              <Box sx={styles.cardText}>
                 <Typography sx={styles.cardHeading}>
                   {sliderData[current].title}
                 </Typography>
@@ -167,11 +162,7 @@ const Hero = () => {
               <Arrowbox>
                 <ChevronRightIcon
                   onClick={nextSlide}
-                  sx={{
-                    color: "white",
-                    fontSize: "22px",
-                    cursor: "pointer",
-                  }}
+                  sx={styles.rightArrowIcon}
                 />
               </Arrowbox>
 

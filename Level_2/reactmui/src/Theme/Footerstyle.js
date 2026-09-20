@@ -19,9 +19,10 @@ export const Footerstyle = (theme) => ({
 
   buttons: {
     display: "flex",
-    flexDirection:"row",
     alignItems: "center",
-    gap:"10px"
-    
+    gap:"10px",
+    maginLeft:"auto",
+    paddingRight:"20px",
+    transform:"translateX(50px)",
   },
 });

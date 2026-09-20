@@ -17,7 +17,7 @@ export const navbarcss = (theme) => ({
   navlinks:{
     display:"flax",
     alignitems:"center",
-    gap:"20px",
+    gap:3,
       marginLeft: "auto",
   },
 

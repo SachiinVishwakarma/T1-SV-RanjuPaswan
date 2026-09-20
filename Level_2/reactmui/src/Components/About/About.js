@@ -18,7 +18,6 @@ const About = () => {
     >
        <Subheading
   txt="About This Project"
-  sx={{ fontSize: "40px" }}
 />
 
       <Text

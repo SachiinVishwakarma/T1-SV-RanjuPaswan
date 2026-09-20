@@ -16,7 +16,7 @@ const Footer = () => {
       position="static"
       sx={styles.footer}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth={false} sx={{px:2}}>
 
         <Toolbar
           disableGutters
@@ -30,13 +30,12 @@ const Footer = () => {
 
          <Stack
             direction="row"
-            spacing={3}
             sx={styles.buttons}
           >
 
-          <Navbtn href="#about" txt="About" />
+          <Navbtn href="#abouttext" txt="About" />
 
-          <Navbtn txt="Services" />
+          <Navbtn  href="included" txt="Services" />
 
           <Navbtn txt="Theme" />
 

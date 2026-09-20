@@ -20,15 +20,11 @@ const Navbar = () => {
           WebTech Practice
         </Typography>
 
-        <Box sx={{display:"flex",
-          alignItems:"center",
-          gap:"25px",
-          marginLeft:"auto",
-        }}>
+        <Box sx={styles.navlinks}>
 
           <Navbtn href="#abouttext" txt="About" />
 
-          <Navbtn txt="Services" />
+          <Navbtn  href="#included" txt="Services" />
 
           <Navbtn txt="Theme" />
 
