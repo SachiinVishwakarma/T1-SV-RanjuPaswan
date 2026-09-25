@@ -12,7 +12,7 @@ export const Signupcheckstyle = (theme) => ({
 
     "& .MuiFormControlLabel-label": {
       fontSize: "12px",
-      color: "#777777",
+       color: theme.palette.text.secondary,
     },
   },
 });
