@@ -1,6 +1,6 @@
 
-export const Overviewstyle = (theme) => ({
 
+export const Overviewstyle = (theme) => ({
   page: {
     display: "flex",
     minHeight: "100vh",
@@ -35,7 +35,7 @@ export const Overviewstyle = (theme) => ({
   },
 
   content: {
-    marginRight:"70px",
+    marginRight: "70px",
     padding: "30px",
     marginTop: "60px",
     overflowY: "auto",
@@ -45,22 +45,22 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `1px solid ${theme.palette.border.main}`,
     borderTop: `3px solid ${theme.palette.border.main}`,
-    borderRadius: "12px",
+    borderRadius: `${theme.shape.borderRadius + 4}px`,
     padding: "28px",
     minHeight: "650px",
   },
 
   heading: {
-    fontSize: "24px",
-    fontWeight: 600,
+    fontSize: theme.typography.h3.fontSize,
+    fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
   description: {
     marginTop: "30px",
     marginBottom: "30px",
-    fontSize: "17px",
-    fontWeight: 500,
+    fontSize: `${theme.typography.fontSize}px`,
+    fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
@@ -69,15 +69,11 @@ export const Overviewstyle = (theme) => ({
   },
 
   sectionTitle: {
-    fontSize: "18px",
-    fontWeight: 600,
+    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "20px",
     color: theme.palette.text.primary,
   },
-
- 
-
-  
 
   cardsGrid: {
     display: "grid",
@@ -99,23 +95,22 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.default,
     border: `1.5px solid ${theme.palette.border.light}`,
     padding: "16px",
-    borderRadius: "10px",
+    borderRadius: `${theme.shape.borderRadius}px`,
     minHeight: "150px",
-    marginTop:"20px",
-
-  display: "flex",
-  flexDirection: "column",
+    marginTop: "20px",
+    display: "flex",
+    flexDirection: "column",
   },
 
   cardTitle: {
     marginBottom: "20px",
-    fontSize: "18px",
-    fontWeight: 600,
+    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
   cardText: {
-    fontSize: "15px",
+    fontSize: `${theme.typography.fontSize - 1}px`,
     lineHeight: 1.5,
     color: theme.palette.text.secondary,
     marginBottom: "20px",
@@ -124,14 +119,14 @@ export const Overviewstyle = (theme) => ({
   progressBar: {
     height: "8px",
     backgroundColor: theme.palette.primary.main,
-    borderRadius: "8px",
-     marginTop: "25px",
+    borderRadius: `${theme.shape.borderRadius}px`,
+    marginTop: "25px",
   },
 
   quickTitle: {
     marginBottom: "30px",
-    fontSize: "18px",
-    fontWeight: 600,
+    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
@@ -149,7 +144,7 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `1.5px solid ${theme.palette.border.main}`,
     padding: "20px",
-    borderRadius: "10px",
+    borderRadius: `${theme.shape.borderRadius}px`,
     textAlign: "center",
     cursor: "pointer",
 
@@ -159,14 +154,14 @@ export const Overviewstyle = (theme) => ({
   },
 
   actionTitle: {
-    fontSize: "16px",
-    fontWeight: 600,
+    fontSize: `${theme.typography.fontSize}px`,
+    fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "8px",
     color: theme.palette.text.primary,
   },
 
   actionText: {
-    fontSize: "14px",
+    fontSize: `${theme.typography.fontSize - 2}px`,
     color: theme.palette.text.secondary,
   },
 });

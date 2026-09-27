@@ -29,17 +29,18 @@ export const Sidebarstyle = (theme) => ({
     height: "40px",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
-    borderRadius: "8px",
+    borderRadius: `${theme.shape.borderRadius}px`,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontWeight: 700,
+    fontWeight: theme.typography.fontWeightBold,
     flexShrink: 0,
   },
 
   userName: {
-    fontSize: "17px",
-    fontWeight: 700,
+    fontSize: `${theme.typography.fontSize + 1}px`,
+    fontWeight: theme.typography.fontWeightBold,
+    color: theme.palette.text.primary,
     width: "15ch",
     overflow: "hidden",
     whiteSpace: "nowrap",
@@ -47,8 +48,8 @@ export const Sidebarstyle = (theme) => ({
   },
 
   userEmail: {
-    fontSize: "11px",
-    fontWeight: 400,
+    fontSize: `${theme.typography.fontSize - 5}px`,
+    fontWeight: theme.typography.fontWeightRegular,
     color: theme.palette.text.secondary,
     marginTop: "3px",
     overflow: "hidden",
@@ -57,39 +58,40 @@ export const Sidebarstyle = (theme) => ({
   },
 
   menuSection: {
-    fontSize: "17px",
+    fontSize: `${theme.typography.fontSize + 1}px`,
     color: theme.palette.text.primary,
     padding: "20px 20px 8px",
-    fontWeight: 500,
+    fontWeight: theme.typography.fontWeightMedium,
   },
 
   menuItem: {
     padding: "10px 20px",
-    fontSize: "15px",
+    fontSize: `${theme.typography.fontSize - 1}px`,
     color: theme.palette.text.primary,
     cursor: "pointer",
     borderLeft: "3px solid transparent",
-    fontWeight: 500,
+    fontWeight: theme.typography.fontWeightMedium,
     marginLeft: "20px",
     marginRight: "10px",
-    borderRadius: "4px",
+    borderRadius: `${theme.shape.borderRadius / 2}px`,
 
     "&:hover": {
-      backgroundColor: "#f8fafc",
+      backgroundColor: theme.palette.background.default,
     },
   },
 
   activeItem: {
-    backgroundColor: "#f0fdfd",
+    backgroundColor: theme.palette.background.default,
     border: `1px solid ${theme.palette.secondary.main}`,
     borderLeft: `3px solid ${theme.palette.secondary.main}`,
-    borderRadius: "15px",
+    borderRadius: `${theme.shape.borderRadius + 7}px`,
   },
 
   bottom: {
     marginTop: "auto",
     padding: "20px 20px 8px",
-    fontSize: "17px",
-    fontWeight: 500,
+    fontSize: `${theme.typography.fontSize + 1}px`,
+    fontWeight: theme.typography.fontWeightMedium,
+    color: theme.palette.text.primary,
   },
 });
