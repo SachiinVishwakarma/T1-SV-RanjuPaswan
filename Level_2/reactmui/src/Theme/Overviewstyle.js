@@ -45,8 +45,8 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `1px solid ${theme.palette.border.main}`,
     borderTop: `3px solid ${theme.palette.border.main}`,
-    borderRadius: `${theme.shape.borderRadius + 4}px`,
-    padding: "28px",
+    borderRadius:theme.shape.borderRadius,
+    padding: "30px",
     minHeight: "650px",
   },
 
@@ -59,7 +59,7 @@ export const Overviewstyle = (theme) => ({
   description: {
     marginTop: "30px",
     marginBottom: "30px",
-    fontSize: `${theme.typography.fontSize}px`,
+    fontSize: "16px",
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
@@ -69,7 +69,7 @@ export const Overviewstyle = (theme) => ({
   },
 
   sectionTitle: {
-    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontSize: "16px",
     fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "20px",
     color: theme.palette.text.primary,
@@ -95,7 +95,7 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.default,
     border: `1.5px solid ${theme.palette.border.light}`,
     padding: "16px",
-    borderRadius: `${theme.shape.borderRadius}px`,
+    borderRadius: "8px",
     minHeight: "150px",
     marginTop: "20px",
     display: "flex",
@@ -104,13 +104,13 @@ export const Overviewstyle = (theme) => ({
 
   cardTitle: {
     marginBottom: "20px",
-    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontSize: "16px",
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
   cardText: {
-    fontSize: `${theme.typography.fontSize - 1}px`,
+    fontSize:"16px",
     lineHeight: 1.5,
     color: theme.palette.text.secondary,
     marginBottom: "20px",
@@ -118,14 +118,15 @@ export const Overviewstyle = (theme) => ({
 
   progressBar: {
     height: "8px",
+    width:"100%",
     backgroundColor: theme.palette.primary.main,
-    borderRadius: `${theme.shape.borderRadius}px`,
-    marginTop: "25px",
+    borderRadius: theme.shape.borderRadius,
+    marginTop: "auto",
   },
 
   quickTitle: {
     marginBottom: "30px",
-    fontSize: `${theme.typography.fontSize + 2}px`,
+    fontSize: "16px",
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
@@ -144,7 +145,7 @@ export const Overviewstyle = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `1.5px solid ${theme.palette.border.main}`,
     padding: "20px",
-    borderRadius: `${theme.shape.borderRadius}px`,
+    borderRadius: "5px",
     textAlign: "center",
     cursor: "pointer",
 
@@ -154,14 +155,14 @@ export const Overviewstyle = (theme) => ({
   },
 
   actionTitle: {
-    fontSize: `${theme.typography.fontSize}px`,
+    fontSize: "16px",
     fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "8px",
     color: theme.palette.text.primary,
   },
 
   actionText: {
-    fontSize: `${theme.typography.fontSize - 2}px`,
+    fontSize: "16px",
     color: theme.palette.text.secondary,
   },
 });
