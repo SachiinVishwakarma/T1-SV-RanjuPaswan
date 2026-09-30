@@ -38,7 +38,7 @@ export const Sidebarstyle = (theme) => ({
   },
 
   userName: {
-    fontSize: "17px",
+    fontSize: theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightBold,
     width: "15ch",
     overflow: "hidden",
@@ -57,7 +57,7 @@ export const Sidebarstyle = (theme) => ({
   },
 
   menuSection: {
-    fontSize: "17px",
+    fontSize:  theme.typography.fontSize,
     color: theme.palette.text.primary,
     padding: "20px 20px 8px",
     fontWeight: theme.typography.fontWeightBold,
@@ -65,7 +65,7 @@ export const Sidebarstyle = (theme) => ({
 
   menuItem: {
     padding: "10px 20px",
-    fontSize: "15px",
+    fontSize:  theme.typography.fontSize,
     color: theme.palette.text.primary,
     cursor: "pointer",
     borderLeft: "3px solid transparent",
@@ -89,7 +89,7 @@ export const Sidebarstyle = (theme) => ({
   bottom: {
     marginTop: "auto",
     padding: "20px 20px 8px",
-    fontSize: "17px",
+    fontSize:  theme.typography.fontSize,
     fontWeight:theme.typography.fontWeightMedium ,
   },
 });

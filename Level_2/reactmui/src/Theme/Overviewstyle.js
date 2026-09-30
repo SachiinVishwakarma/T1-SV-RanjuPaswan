@@ -59,7 +59,7 @@ export const Overviewstyle = (theme) => ({
   description: {
     marginTop: "30px",
     marginBottom: "30px",
-    fontSize: "16px",
+    fontSize:  theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
@@ -69,7 +69,7 @@ export const Overviewstyle = (theme) => ({
   },
 
   sectionTitle: {
-    fontSize: "16px",
+    fontSize:  theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "20px",
     color: theme.palette.text.primary,
@@ -104,13 +104,13 @@ export const Overviewstyle = (theme) => ({
 
   cardTitle: {
     marginBottom: "20px",
-    fontSize: "16px",
+    fontSize: theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
 
   cardText: {
-    fontSize:"16px",
+    fontSize: theme.typography.fontSize,
     lineHeight: 1.5,
     color: theme.palette.text.secondary,
     marginBottom: "20px",
@@ -126,7 +126,7 @@ export const Overviewstyle = (theme) => ({
 
   quickTitle: {
     marginBottom: "30px",
-    fontSize: "16px",
+    fontSize: theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
     color: theme.palette.text.primary,
   },
@@ -155,14 +155,14 @@ export const Overviewstyle = (theme) => ({
   },
 
   actionTitle: {
-    fontSize: "16px",
+    fontSize:  theme.typography.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
     marginBottom: "8px",
     color: theme.palette.text.primary,
   },
 
   actionText: {
-    fontSize: "16px",
+    fontSize:  theme.typography.fontSize,
     color: theme.palette.text.secondary,
   },
 });
