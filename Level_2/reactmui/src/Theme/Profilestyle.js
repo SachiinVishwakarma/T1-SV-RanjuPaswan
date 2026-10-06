@@ -9,7 +9,6 @@ export const Profilestyle = (theme) => ({
 
   main: {
     flex: 1,
-    marginLeft: "250px",
     minHeight: "100vh",
 
     "@media (max-width: 768px)": {
@@ -28,7 +27,7 @@ export const Profilestyle = (theme) => ({
     display: "flex",
     alignItems: "center",
     zIndex: 5,
-    fontFamily: theme.typography.fontFamily,
+    fontSize:theme.typography.h3.fontSize,
     fontWeight: theme.typography.fontWeightMedium,
 
     "@media (max-width: 768px)": {
@@ -47,7 +46,7 @@ export const Profilestyle = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: `1px solid ${theme.palette.border.main}`,
     borderTop: `3px solid ${theme.palette.border.main}`,
-    borderRadius: `${theme.shape.borderRadius + 4}px`,
+    borderRadius:theme.shape.borderRadius ,
     padding: "28px",
     minHeight: "900px",
   },
@@ -107,7 +106,7 @@ export const Profilestyle = (theme) => ({
 
   cancelButton: {
     padding: "10px 20px",
-    backgroundColor: "#d7d7d7",
+    backgroundColor:  theme.palette.background.default,
     border: `1px solid ${theme.palette.secondary.main}`,
     borderRadius: `${theme.shape.borderRadius}px`,
     color: theme.palette.text.primary,
