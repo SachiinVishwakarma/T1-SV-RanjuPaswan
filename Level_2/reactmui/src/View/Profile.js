@@ -7,7 +7,13 @@ import { useTheme } from "@mui/material/styles";
 import Sidebar from "../Components/Overview/Sidebar";
 import Input from "../Components/Overview/Input";
 
+import Navbtn from "../Components/Button/Navbtn";
+import Colorbtn from "../Components/Button/Colorbtn";
+
 import { Profilestyle } from "../Theme/Profilestyle";
+
+import validation from "../Components/Validation/Validation";
+import commonValidation from "../Components/Validation/CommanValidation";
 
 const Profile = () => {
   const theme = useTheme();
@@ -49,8 +55,56 @@ const Profile = () => {
   };
 
   const handleSave = () => {
+      
+    const nameError = commonValidation.validateName(
+      formData.fullName,
+      " Enter the Full Name"
+    );
+    
+      if (nameError) {
+      alert(nameError);
+      return;
+    }
+      const emailError = commonValidation.validateEmail(
+      formData.email
+    );
+
+    if (emailError) {
+      alert(emailError);
+      return;
+    }
+
+    
+     const phoneError = validation.validatePhone(
+      formData.number
+    );
+
+    if (phoneError) {
+      alert(phoneError);
+      return;
+    }
+    
+     const pinError = validation.validatePin(
+      formData.pin
+    );
+
+    if (pinError) {
+      alert(pinError);
+      return;
+    }
+
+    const gitError = validation.validateGithub(
+      formData.git
+    );
+
+    if (gitError) {
+      alert(gitError);
+      return;
+    }
+
     alert("Profile changes saved successfully!");
   };
+
 
   return (
     <Box sx={styles.page}>
@@ -159,21 +213,21 @@ const Profile = () => {
             </Box>
 
             <Box sx={styles.buttonGroup}>
-              <Button
-                type="button"
-                onClick={handleCancel}
-                sx={styles.cancelButton}
-              >
-                Cancel Change
-              </Button>
+              <Box sx={styles.buttonGroup}>
+  <Navbtn
+    type="button"
+    onClick={handleCancel}
+    txt="Cancel Change"
+    sx={styles.cancelButton}
+  />
 
-              <Button
-                type="button"
-                onClick={handleSave}
-                sx={styles.saveButton}
-              >
-                Save Change
-              </Button>
+  <Colorbtn
+    type="button"
+    onClick={handleSave}
+    txt="Save Change"
+    sx={styles.saveButton}
+  />
+</Box>
             </Box>
           </Box>
         </Box>
