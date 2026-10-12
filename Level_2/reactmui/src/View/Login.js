@@ -3,17 +3,18 @@ import { useState } from "react";
 
 import { Box, Typography, Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Signupinput from "../Components/Signup/Signupinput";
 import SignupCheck from "../Components/Signup/SignupCheck";
 
 import { Loginstyle } from "../Theme/loginstyle";
+import commonValidation from "../Components/Validation/CommanValidation";
 
 const Login = () => {
   const theme = useTheme();
   const styles = Loginstyle(theme);
-  const navigate = useNavigate();
+  
 
   const [formData, setFormData] = useState({
     email: "",
@@ -40,22 +41,20 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const { email, password } = formData;
+  const emailError = commonValidation.validateEmail(
+      formData.email
+    );
 
-    if (email === "" || password === "") {
-      alert("Please enter all fields.");
+    if (emailError) {
+      alert(emailError);
       return;
     }
+    const passwordError = commonValidation.validatePassword(
+      formData.password
+    );
 
-    const emailRegex = /^[^\s@#]+@[^\s@#]+\.[^\s@#]+$/;
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email.");
-      return;
-    }
-
-    if (password.length < 8) {
-      alert("Password must be at least 8 characters.");
+    if (passwordError) {
+      alert(passwordError);
       return;
     }
 
@@ -64,8 +63,8 @@ const Login = () => {
 
     const user = userData.find(
       (item) =>
-        item.email === email &&
-        item.password === password
+        item.email ===formData. email &&
+        item.password ===formData. password
     );
 
     if (!user) {
@@ -73,9 +72,19 @@ const Login = () => {
       return;
     }
 
+localStorage.setItem(
+  "currentUser",
+  JSON.stringify({
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+    password: user.password,
+  })
+);
+
     alert("Login Successful!");
 
-    navigate("/");
+   window.location.href = "/overview";
   };
 
   return (
