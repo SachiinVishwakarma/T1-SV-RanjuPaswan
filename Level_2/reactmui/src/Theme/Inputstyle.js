@@ -14,8 +14,8 @@ export const Inputstyle = (theme) => ({
 
     "& .MuiOutlinedInput-root": {
       width: "100%",
-      backgroundColor: theme.palette.secondary.contrastText,
-      borderRadius: "10px",
+      backgroundColor: theme.palette.input.color,
+      borderRadius: theme.shape.smallRadius,
 
       "& fieldset": {
         border: "none",

@@ -16,24 +16,27 @@ export const Profilestyle = (theme) => ({
     },
   },
 
-  topbar: {
-    position: "fixed",
-    top: 0,
-    left: "250px",
-    right: 0,
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    padding: "18px 30px",
-    display: "flex",
-    alignItems: "center",
-    zIndex: 5,
-    fontSize:theme.typography.h3.fontSize,
-    fontWeight: theme.typography.fontWeightMedium,
 
-    "@media (max-width: 768px)": {
+  
+topbar: {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  boxSizing: "border-box",
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  padding: "18px 30px 18px 280px",
+  display: "flex",
+  alignItems: "center",
+  zIndex: 5,
+  fontSize: theme.typography.h3.fontSize,
+  fontWeight: theme.typography.fontWeightMedium,
+
+  "@media (max-width: 768px)": {
       left: 0,
-    },
-  },
+     },
+},
 
   content: {
     padding: "30px",
@@ -43,10 +46,10 @@ export const Profilestyle = (theme) => ({
   },
 
   profile: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
     border: `1px solid ${theme.palette.border.main}`,
     borderTop: `3px solid ${theme.palette.border.main}`,
-    borderRadius:theme.shape.borderRadius ,
+    borderRadius:theme.shape.smallRadius ,
     padding: "28px",
     minHeight: "900px",
   },
