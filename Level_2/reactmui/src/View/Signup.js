@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 
 import { Box, Typography, Button, Stack } from "@mui/material";
@@ -10,6 +8,9 @@ import Signupinput from "../Components/Signup/Signupinput";
 import SignupCheck from "../Components/Signup/SignupCheck";
 
 import { Signupstyle } from "../Theme/Signupstyle";
+
+import validation from "../Components/Validation/Validation";
+import commonValidation from "../Components/Validation/CommanValidation";
 
 const Signup = () => {
   const theme = useTheme();
@@ -24,6 +25,8 @@ const Signup = () => {
     confirmPassword: "",
     terms: false,
   });
+
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -44,67 +47,78 @@ const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      confirmPassword,
-      terms,
-    } = formData;
+    const newErrors = {};
 
-    let userData =
+    // Common validation
+
+    const firstNameError = commonValidation.validateName(
+      formData.firstName,
+      "First Name"
+    );
+
+    if (firstNameError) {
+      newErrors.firstName = firstNameError;
+    }
+
+    const lastNameError = commonValidation.validateName(
+      formData.lastName,
+      "Last Name"
+    );
+
+    if (lastNameError) {
+      newErrors.lastName = lastNameError;
+    }
+
+    const emailError = commonValidation.validateEmail(
+      formData.email
+    );
+
+    if (emailError) {
+      newErrors.email = emailError;
+    }
+
+    const passwordError = commonValidation.validatePassword(
+      formData.password
+    );
+
+    if (passwordError) {
+      newErrors.password = passwordError;
+    }
+
+    const confirmPasswordError =
+      commonValidation.validateConfirmPassword(
+        formData.password,
+        formData.confirmPassword
+      );
+
+    if (confirmPasswordError) {
+      newErrors.confirmPassword = confirmPasswordError;
+    }
+
+    
+
+    const termsError = validation.validateTerms(
+      formData.terms
+    );
+
+    if (termsError) {
+      newErrors.terms = termsError;
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    const userData =
       JSON.parse(localStorage.getItem("userDetails")) || [];
 
-    if (
-      firstName === "" ||
-      lastName === "" ||
-      email === "" ||
-      password === "" ||
-      confirmPassword === ""
-    ) {
-      alert("Please enter all fields.");
-      return;
-    }
-
-    const nameRegex = /^[A-Za-z]{2,15}$/;
-    const emailRegex = /^[^\s@#]+@[^\s@#]+\.[^\s@#]+$/;
-
-    if (!nameRegex.test(firstName)) {
-      alert("First Name must contain only letters.");
-      return;
-    }
-
-    if (!nameRegex.test(lastName)) {
-      alert("Last Name must contain only letters.");
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email.");
-      return;
-    }
-
-    if (password.length < 8) {
-      alert("Password must be at least 8 characters.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      alert("Passwords do not match.");
-      return;
-    }
-
-    if (!terms) {
-      alert("Please accept the terms and conditions.");
-      return;
-    }
-
     userData.push({
-      firstName,
-      lastName,
-      email,
-      password,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      password: formData.password,
     });
 
     localStorage.setItem(
@@ -136,6 +150,8 @@ const Signup = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
+              error={Boolean(errors.firstName)}
+              helperText={errors.firstName}
             />
 
             <Signupinput
@@ -144,6 +160,8 @@ const Signup = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
+              error={Boolean(errors.lastName)}
+              helperText={errors.lastName}
             />
           </Stack>
 
@@ -155,13 +173,17 @@ const Signup = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              error={Boolean(errors.email)}
+              helperText={errors.email}
             />
           </Box>
 
           <Stack
             direction="row"
-            sx={styles.row}
-            marginTop="18px"
+            sx={{
+              ...styles.row,
+              marginTop: "18px",
+            }}
           >
             <Signupinput
               label="Password"
@@ -170,6 +192,8 @@ const Signup = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
+              error={Boolean(errors.password)}
+              helperText={errors.password}
             />
 
             <Signupinput
@@ -179,6 +203,8 @@ const Signup = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
+              error={Boolean(errors.confirmPassword)}
+              helperText={errors.confirmPassword}
             />
           </Stack>
 
@@ -190,6 +216,12 @@ const Signup = () => {
             checked={formData.terms}
             onChange={handleCheckbox}
           />
+
+          {errors.terms && (
+            <Typography color="error" fontSize="13px">
+              {errors.terms}
+            </Typography>
+          )}
 
           <Button
             type="submit"

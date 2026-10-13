@@ -5,24 +5,50 @@ import { NavLink } from "react-router-dom";
 
 import { Sidebarstyle } from "../../Theme/Sidebarstyle";
 
-const Sidebar = () => {
-  const theme = useTheme();
-  const styles = Sidebarstyle(theme);
+const Sidebar = ({ name, email }) => {
+   const theme = useTheme();
+   const styles = Sidebarstyle(theme); 
+
+
+  const user = JSON.parse(
+  localStorage.getItem("currentUser") || "{}"
+);
+
+const userName =
+  name ||
+  `${user.firstName || ""} ${user.lastName || ""}`.trim() ||
+  "Demo User";
+
+const userEmail =
+  email || user.email || "demo@example.com";
+  
+const initials = userName
+  .split(/\s+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((word) => word.charAt(0))
+  .join("")
+  .toUpperCase();
+       
+   const handleLogout = () => {
+  localStorage.removeItem("currentUser");
+  navigate("/login");
+};
 
   return (
     <Box component="aside" sx={styles.sidebar}>
       <Box sx={styles.userBox}>
         <Box sx={styles.logo}>
-          DU
+        {initials}
         </Box>
 
         <Box>
           <Typography sx={styles.userName}>
-            Demo User
+            {userName}
           </Typography>
 
           <Typography sx={styles.userEmail}>
-            demo@webtech.parctice
+            {userEmail}
           </Typography>
         </Box>
       </Box>
@@ -130,6 +156,7 @@ const Sidebar = () => {
     </Box>
   );
 };
+
 
 export default Sidebar;
 

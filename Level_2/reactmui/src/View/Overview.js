@@ -11,6 +11,17 @@ const Overview = () => {
   const theme = useTheme();
   const styles = Overviewstyle(theme);
 
+   const user = JSON.parse(
+    localStorage.getItem("currentUser") || "{}"
+  );
+
+  const userName =
+    `${user.firstName || ""} ${user.lastName || ""}`.trim() ||
+    "";
+
+  const userEmail = user.email || "";
+
+
   return (
     <Box sx={styles.page}>
       <Sidebar />
@@ -23,7 +34,7 @@ const Overview = () => {
         <Box sx={styles.content}>
           <Box sx={styles.welcomeCard}>
             <Typography sx={styles.heading}>
-              Welcome back, Demo User
+                Welcome back, {userName || "Demo User"}
             </Typography>
 
             <Typography sx={styles.description}>
